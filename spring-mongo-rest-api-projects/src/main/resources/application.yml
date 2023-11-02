@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongodb
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: debug

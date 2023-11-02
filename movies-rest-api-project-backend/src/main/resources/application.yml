@@ -1,0 +1,23 @@
+server:
+  port: ${env.SERVER_PORT}
+
+spring:
+  data:
+    mongodb:
+      database: ${env.MONGO_DATABASE}
+      port: ${env.MONGO_PORT}
+      host: ${env.MONGO_HOST}
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n"
+
+

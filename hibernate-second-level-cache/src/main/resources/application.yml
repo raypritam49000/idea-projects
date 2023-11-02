@@ -1,0 +1,38 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hibernate-cache-db?createDatabaseIfNotExist=true
+    username: root
+    password: 0003pray
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        show_sql: true
+        hbm2ddl.auto: update
+        cache:
+          ehcache:
+            missing_cache_strategy': create
+          use_second_level_cache: true
+          use_query_cache: true
+          region:
+            factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+      javax:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+
+#logging:
+#  level:
+#    net:
+#      sf:
+#        ehcache: debug
+#    org:
+#      hibernate:
+#        type: TRACE
+#        SQL: DEBUG
+

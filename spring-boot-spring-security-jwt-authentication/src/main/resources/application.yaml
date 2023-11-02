@@ -1,0 +1,45 @@
+#server:
+#  port: 8888
+#
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/spring_security_db?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: 0003pray
+#
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#        show_sql: true
+#        format_sql: true
+#        hbm2ddl.auto: update
+#
+#bezkoder:
+#  app:
+#    jwtSecret: ======================BezKoder=Spring===========================
+#    jwtExpirationMs: 86400000
+
+server:
+  port: 8888
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_security_db
+    username: postgres
+    password: postgres
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: true
+        hbm2ddl.auto: update
+
+bezkoder:
+  app:
+    jwtSecret: ======================BezKoder=Spring===========================
+    jwtExpirationMs: 86400000

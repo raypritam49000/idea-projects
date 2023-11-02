@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: Product
+      host: enggadda
+      port: 27017
